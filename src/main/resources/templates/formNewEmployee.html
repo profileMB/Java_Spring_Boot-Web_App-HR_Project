@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HR Management</title>
+	<link rel="stylesheet" href="/css/formEmployee_style.css"> 
+	<link rel="icon" href="/pictures/favicon.png" type="image/png"/>
+	<link href='https://fonts.googleapis.com/css2?family=Work+Sans&display=swap' rel='stylesheet'>
+</head>
+<body>
+	<header>
+	  <img id="logo_header" src="/pictures/logo_header.png" alt="team_icon"/>
+	  <a id="title" href=".">HR Management</a>
+	</header>
+    <main>
+        <h2>Ajout d'un nouvel employé</h2>
+        <form method="post" th:action="@{/saveEmployee}" th:object="${employee}">
+
+                <label for="firstNameInput">Prénom</label>
+                <input type="text" id="firstNameInput" th:field="*{firstName}" placeholder="Saisir le prénom">
+                <span th:if="${#fields.hasErrors('firstName')}" class="error" th:errors="*{firstName}"></span>
+
+                <label for="lastNameInput">Nom</label>
+                <input type="text" id="lastNameInput" th:field="*{lastName}" placeholder="Saisir le nom">
+                <span th:if="${#fields.hasErrors('lastName')}" class="error" th:errors="*{lastName}"></span>
+
+                <label for="mailInput">E-mail</label>
+                <input type="email" id="mailInput" th:field="*{mail}" placeholder="Saisir l'adresse e-mail">
+                <span th:if="${#fields.hasErrors('mail')}" class="error" th:errors="*{mail}"></span>
+                <span th:if="${emailExistsError}" th:text="${emailExistsError}" class="error"></span>
+
+                <label for="passwordInput">Mot de passe</label>
+                <input type="password" id="passwordInput" th:field="*{password}" placeholder="Mot de passe">
+                <span th:if="${#fields.hasErrors('password')}" class="error" th:errors="*{password}"></span>
+
+            <button type="submit">Valider</button>
+        </form>
+    </main>
+</body>
+</html>
