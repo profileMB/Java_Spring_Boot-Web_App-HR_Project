@@ -1,4 +1,4 @@
-# Java – Spring/Spring Boot (Full Stack Project) - Web App
+# Java - Spring/Spring Boot (Full Stack Project) - Web App
 - HR Management is a demo web application connected to a REST API that allows managing a company's workforce.
 - Click [here]( https://github.com/profileMB/Java_Spring_Boot-API_REST-HR_Project) to view the repository for the REST API powering this web application.
 
@@ -9,7 +9,7 @@ As this web application is a public demo, to ensure the database remains "clean"
 See the final result of the website by clicking this link : https://hrmanagement.up.railway.app
 
 ## Video presentation
-Coming soon!
+https://github.com/user-attachments/assets/78ac305c-6745-4750-855a-22190f1ef33f
 
 ## Technologies used (including REST API)
 #### Programming Language :
